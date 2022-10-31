@@ -8,6 +8,48 @@
     <title>Pizza Comparer</title>
 </head>
 <body>
+    <main>
+        <h1>Pizza Comparer</h1>
+        <p>
+            Have you ever wondered if it would be better to have one large pizza or two smaller ones?
+            </br>
+            Wait no more!
+            </br>
+            With the pizza comparer you can compare one large pizza to two smaller ones!
+            </br>
+            Or if you'd prefer, you can check what large pizza is the same amount as two smaller ones or the other way round!
+        </p>
+        <div class="user-input">
+            <div class="unit-selection">
+                <input type="radio" name="inch" id="input-inch" value="inch">
+                <label for="inch">in</label>
+                <input type="radio" name="centimeter" id="centimeter" value="centimeter">
+                <label for="centimeter">cm</label>
+            </div>
+            <div class="size-input">
+                <label for="larger">Larger</label>
+                <input type="number" name="larger" id="larger">
+                <label for="smaller">Smaller</label>
+                <input type="number" name="smaller" id="smaller">
+            </div>
+        </div>
+        <div class="result-div hidden">
+            <div class="larger-pizza-div">
+                <img src="images/pizza.png" alt="image of the larger pizza">
+                <h2 class="larger-pizza-text"></h2>
+            </div>
+            <div class="smaller-pizzas-div">
+                <div>
+                    <img src="images/pizza.png" alt="image of one of the smaller pizzas">
+                    <img src="images/pizza.png" alt="image of the other one of the smalelr pizzas">
+                </div>
+                <h2 class="smaller-pizza-text"></h2>
+            </div>
+        </div>
+        <div class="final-verdict-div">
+            <h2 class="final-verdict-text"></h2>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
