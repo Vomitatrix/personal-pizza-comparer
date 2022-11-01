@@ -1,3 +1,96 @@
+/* * {border: 1px red dotted;} */
+
+html {
+    font-family: 'Roboto';
+}
+
+body {
+    margin: 0;
+    max-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+h1 {
+    color: #c22;
+    font-size: 3em;
+}
+
+.user-input {
+    margin-bottom: 2em;
+}
+
+.user-input > div, .size-input > div {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.size-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.size-input > div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.size-input > div > label {
+    margin: 0 0.5em;
+}
+
+.result-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+}
+
+.pizza-div-half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.pizza-image-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+}
+
+img {
+    max-width: 50%;
+    flex: auto auto;
+}
+
+.larger-pizza-div > .pizza-image-div > img {
+    max-width: 60%;
+}
+
+.pizza-text {
+    height: 10%;
+}
+
+.final-verdict-text {
+    border: 2px #c22 solid;
+    border-radius: 7px;
+    padding: 6px;
+    
+}
+
 .hidden {
     display: none;
 }
