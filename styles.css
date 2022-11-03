@@ -1,4 +1,4 @@
-/* * {border: 1px red dotted;} */
+* {border: 1px red dotted;}
 
 html {
     font-family: 'Roboto';
@@ -89,4 +89,19 @@ img {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 1200px) {
+    .result-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-div {
+        width: 90%;
+    }
+
+    .pizza-div-half {
+        width: 90%;
+    }
 }
