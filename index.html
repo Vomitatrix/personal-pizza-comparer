@@ -21,19 +21,19 @@
         </p>
         <div class="user-input">
             <div class="unit-selection">
-                <input type="radio" name="unit" id="input-inch" value="inch">
+                <input class="unit-input" type="radio" name="unit" id="inch" value="inch">
                 <label for="inch">in</label>
-                <input type="radio" name="unit" id="centimeter" value="centimeter">
+                <input class="unit-input" type="radio" name="unit" id="centimeter" value="centimeter">
                 <label for="centimeter">cm</label>
             </div>
-            <div class="size-input">
+            <div>
                 <div>
                     <label for="larger">Larger:</label>
-                    <input type="number" name="larger" id="larger" step="1">
+                    <input class="size-input" type="number" name="larger" id="larger" step="1">
                 </div>
                 <div>
                     <label for="smaller">Smaller:</label>
-                    <input type="number" name="smaller" id="smaller" step="1">
+                    <input class="size-input" type="number" name="smaller" id="smaller" step="1">
                 </div>
             </div>
             <button>Check</button>
@@ -41,14 +41,14 @@
         <div class="result-div hidden">
             <div class="larger-pizza-div pizza-div-half">
                 <div class="pizza-image-div">
-                    <img class="large-pizza-img" src="images/pizza.png" alt="image of the larger pizza">
+                    <img class="larger-pizza-img" src="images/pizza.png" alt="image of the larger pizza">
                 </div>
                 <h2 class="larger-pizza-text pizza-text"></h2>
             </div>
             <div class="smaller-pizzas-div pizza-div-half">
                 <div class="pizza-image-div">
-                    <img class="small-pizza-img" src="images/pizza.png" alt="image of one of the smaller pizzas">
-                    <img class="small-pizza-img" src="images/pizza.png" alt="image of the other one of the smalelr pizzas">
+                    <img class="smaller-pizza-img" src="images/pizza.png" alt="image of one of the smaller pizzas">
+                    <img class="smaller-pizza-img" src="images/pizza.png" alt="image of the other one of the smalelr pizzas">
                 </div>
                 <h2 class="smaller-pizza-text pizza-text"></h2>
             </div>

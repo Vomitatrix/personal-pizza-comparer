@@ -76,10 +76,6 @@ img {
     flex: auto auto;
 }
 
-.larger-pizza-div > .pizza-image-div > img {
-    max-width: 60%;
-}
-
 .pizza-text {
     height: 10%;
 }
