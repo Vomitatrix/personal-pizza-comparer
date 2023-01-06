@@ -27,7 +27,12 @@ function outputResult(unit, largeDiam, largeArea, smallDiam, smallArea) {
     smallPizzaText.textContent = `Two ${diameterSmaller} ${unit} pizzas have an area of approximately ${areaSmaller} ${unit}²`;
 }
 
-function resizeImages(largeDiam, smallDiam) {
+function resizeImages(largeDiam, smallDiam, largeBigger = true) {
+    if (!largeBigger) {
+        largePizzaImg.style.width = (50 * largeDiam) / smallDiam + '%';
+        smallPizzaImg.forEach(e => (e.style.width = '50%'));
+        return;
+    }
     largePizzaImg.style.width = '50%';
     smallPizzaImg.forEach(e => (e.style.width = `${50 * (smallDiam / largeDiam)}%`));
 }
@@ -38,7 +43,6 @@ function checkButton() {
     let areaLarger = Math.PI * (diameterLarger / 2) ** 2;
     let areaSmaller = Math.PI * (diameterSmaller / 2) ** 2 * 2;
 
-    finalVerdictText.textContent = '';
     const unit = checkUnit();
 
     // if both units missing or if no unit checked
@@ -83,7 +87,7 @@ function checkButton() {
     }
 
     outputResult(unit, diameterLarger, areaLarger, diameterSmaller, areaSmaller);
-    resizeImages(diameterLarger, diameterSmaller);
+    resizeImages(diameterLarger, diameterSmaller, diameterLarger > diameterSmaller);
 }
 
 btn.addEventListener('click', checkButton);

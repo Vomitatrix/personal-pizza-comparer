@@ -115,12 +115,11 @@ button:active {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    min-height: 70%;
+    height: 80%;
 }
 
 img {
     max-width: 50%;
-    flex: auto auto;
 }
 
 .pizza-text {
@@ -128,7 +127,7 @@ img {
 }
 
 .final-verdict-div {
-    margin: auto 5%;
+    margin: 1em;
 }
 
 .final-verdict-text {
