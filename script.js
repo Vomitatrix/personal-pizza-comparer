@@ -69,16 +69,24 @@ function checkButton() {
 
         // if both sizes are given
     } else {
-        let isLargeMore = areaLarger > areaSmaller;
-        let areaDifference = isLargeMore
+        const isLargeMore = areaLarger > areaSmaller;
+        const areaDifference = isLargeMore
             ? (areaLarger - areaSmaller).toFixed(2)
             : (areaSmaller - areaLarger).toFixed(2);
-        let pizzaDifference = Math.round((areaDifference / (areaSmaller / 2)) * 100);
+        const pizzaDifferencePercentage = Math.round(
+            (areaDifference / (`${isLargeMore ? areaSmaller : areaLarger}` / 2)) * 100
+        );
 
         if (isLargeMore) {
-            finalVerdictText.innerHTML = `One ${diameterLarger} ${unit} pizza is more pizza than two ${diameterSmaller} ${unit} pizzas.</br>The difference is ${areaDifference} ${unit}².</br>Or ${pizzaDifference}% more pizza.`;
+            finalVerdictText.innerHTML = `
+                    One ${diameterLarger} ${unit} pizza is more pizza than two ${diameterSmaller} ${unit} pizzas.</br>
+                    Or ${pizzaDifferencePercentage}% more pizza.
+                `;
         } else if (!isLargeMore) {
-            finalVerdictText.innerHTML = `Two ${diameterSmaller} ${unit} pizzas is more pizza than one ${diameterLarger} ${unit} pizza.</br>The difference is ${areaDifference} ${unit}².</br>Or ${pizzaDifference}% more pizza.`;
+            finalVerdictText.innerHTML = `
+                Two ${diameterSmaller} ${unit} pizzas is more pizza than one ${diameterLarger} ${unit} pizza.</br>
+                Or ${pizzaDifferencePercentage}% more pizza.
+            `;
         } else {
             finalVerdictText.textContent = `One ${diameterLarger} ${unit} pizza is the same amount of pizza as two ${diameterSmaller} ${unit} pizzas.`;
         }
